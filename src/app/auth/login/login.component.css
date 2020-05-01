@@ -1,0 +1,13 @@
+.card{
+  border:1px dotted black;
+  margin: 100px 475px;
+  width: 500px;
+  text-align: center;
+}
+
+mat-form-field{
+  width: 80%;
+}
+button{
+  width: 40%;
+}

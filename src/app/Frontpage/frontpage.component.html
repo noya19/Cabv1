@@ -1,0 +1,30 @@
+<div class = "card">
+<mat-card>
+  <h2 style="color:blueviolet;">BOOKINGS</h2>
+  <form [formGroup]="form" (submit)="onSearch()">
+
+    <mat-button-toggle-group appearance="legacy" formControlName="tt">
+      <mat-button-toggle value="one-way" >One-Way</mat-button-toggle>
+      <mat-button-toggle value="Round-trip">Round-Trip</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-form-field appearance="outline">
+    <mat-label>Pickup Point</mat-label>
+      <input matInput type="text" formControlName="pickup" placeholder="Where from?">
+      <mat-error *ngIf="form.get('pickup').invalid">Please Provide Required Input</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+    <mat-label>Destination</mat-label>
+      <input matInput type="text" formControlName="dest" placeholder="Where to?">
+      <mat-error *ngIf="form.get('dest').invalid">Please Provide Required Input</mat-error>
+    </mat-form-field>
+
+
+    <button
+    mat-raised-button
+    color = "accent"
+    type="submit">Search Cabs</button>
+  </form>
+</mat-card>
+</div>

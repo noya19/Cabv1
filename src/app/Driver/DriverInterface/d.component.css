@@ -1,0 +1,18 @@
+.driver{
+  width: 80%;
+  margin: 30px 150px;
+}
+.header{   /*title*/
+  margin-top: 10px;
+}
+
+.driver-image
+{
+  width: 100%;
+}
+
+.driver-image img
+{
+  width: 40%;
+  float: right;
+}

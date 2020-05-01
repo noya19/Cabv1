@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <span routerLink='/'>TAXI GO</span>
+  <span class ="spacer"></span>
+  <ul>
+    <li *ngIf="!userIsauthenticated">
+      <a mat-raised-button routerLink="/login" color="accent" >LOGIN</a>
+    </li>
+    <li *ngIf="!userIsauthenticated">
+      <a mat-raised-button routerLink="/signup" color="accent">SIGNUP</a>
+    </li>
+    <li *ngIf="!userIsauthenticated">
+      <a mat-raised-button routerLink="/driver" color="accent">DRIVER</a>
+    </li>
+    <li *ngIf="userIsauthenticated">
+      <a mat-raised-button routerLink="/profile" color="accent">PROFILE</a>
+    </li>
+    <li *ngIf="userIsauthenticated">
+      <a mat-raised-button (click)="onLogout()" color="accent">LOGOUT</a>
+    </li>
+  </ul>
+</mat-toolbar>

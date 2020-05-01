@@ -1,0 +1,42 @@
+<div class="Whole">
+<div class="driver">
+  <mat-card>
+    <mat-card-header>
+      <h2>PROFILE INFO</h2>
+    </mat-card-header>
+    <mat-divider class="divider"></mat-divider>
+     <mat-card-content class= "cardcontent" *ngFor="let j of displaydata" >
+      <div class="disp-data">
+        <img [src]="j.imagePath" [alt]="j.name">
+      </div>
+      <p>NAME: {{ j.name }}</p>
+      <p>PHONE: {{ j.phone }}</p>
+      <p>EMAIL: {{ j.email }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-card class="driver">
+<mat-card-header>RIDE HISTORIES</mat-card-header>
+<mat-divider></mat-divider>
+<mat-card-content>
+  <mat-accordion multi="True" *ngIf="bookingdata.length>0">
+    <mat-expansion-panel *ngFor="let i of bookingdata">
+      <mat-expansion-panel-header class="header">
+        <mat-panel-title>
+          {{ i.date }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>bookid: {{ i.bookid }}</p>
+      <p>Trip-type: {{ i.tt }}</p>
+      <p>Pickup-point: {{ i.pickup }}</p>
+      <p>Destination: {{ i.dest }}</p>
+      <p>time: {{ i.time }}</p>
+      <p>DriverID: {{ i.did }}</p>
+      <p>Driver-Name: {{ i.dname }}</p>
+      <p>Car-Type: {{ i.ct }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card-content>
+</mat-card>
+</div>

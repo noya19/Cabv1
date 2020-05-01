@@ -1,0 +1,66 @@
+.Whole{     /*This is for all the mat-cards to be placed in a grid*/
+  display: grid;
+  row-gap: 5px;     /*This Specifies the gap between Matcards*/
+  padding: 1px;
+}
+.firstone{     /*The first mat card  */
+  position: relative;
+  border:1px dotted black;
+  margin: 10px 10px;
+  text-align: center;
+  display: grid;
+}
+mat-form-field{
+  width: 30%;
+  margin: 5px 0px;
+  display: block;
+}
+.sub{
+  float: left;
+  width: 30%;
+}
+
+
+/*The Part is for the Map */
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 470px;
+  right: 0;
+  bottom: 10px;
+  margin: 5px 5px;
+  float: right;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+/*Map Ends Here */
+
+.opt{
+  width: 24%;
+  margin-top: 10px;
+  margin-left:  50px;
+}
+
+.Second{     /*The second mat card  */
+  position: relative;
+  border:1px dotted black;
+  margin: 10px 10px;
+  text-align: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+}
+
+.example-button-container {
+  width: 120px;
+}

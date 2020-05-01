@@ -1,0 +1,28 @@
+.driver{
+  width: 80%;
+  margin: 30px 150px;
+  border:1px dotted black;
+}
+.spacer{
+  flex: 1 1 auto;
+}
+.cancelbutton{
+  width: 150px;
+  height: 50px;
+  margin-top: 7px;
+}
+.cardcontent{
+  margin-top: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.disp-data
+{
+  width: 100%;
+}
+
+.disp-data img
+{
+  width: 16%;
+  float: right;
+}

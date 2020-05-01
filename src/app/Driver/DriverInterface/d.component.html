@@ -1,0 +1,22 @@
+<div class="driver">
+  <mat-accordion multi="True" *ngIf="dl.length>0">
+    <mat-expansion-panel *ngFor="let driver of dl">
+      <mat-expansion-panel-header class="header">
+        <mat-panel-title>
+          {{ driver.name }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="driver-image">
+        <img [src]="driver.imagePath" [alt]="driver.name">
+      </div>
+      <p>Phone No: {{ driver.phone }}</p>
+      <p>Car-Type: {{ driver.ctype}}</p>
+      <p>Car-Name: {{ driver.cname}}</p>
+      <p>Plate: {{ driver.plate}}</p>
+      <mat-action-row>
+        <button mat-fab disabled>{{ driver.rating }}</button>
+        <button mat-raised-button (click)="onselect(driver.id, driver.name, driver.cname, driver.phone, driver.plate, driver.imagePath )" color="accent">SELECT & CONFIRM</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

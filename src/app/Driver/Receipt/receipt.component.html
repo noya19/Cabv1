@@ -1,0 +1,27 @@
+<div class="driver">
+  <mat-card>
+    <mat-card-header>
+      <h2>RECEIPT</h2>
+      <span class="spacer"></span>
+      <button mat-raised-button (click)="onreturn()"  class="cancelbutton" color="accent">GO BACK</button>
+    </mat-card-header>
+    <mat-divider class="divider"></mat-divider>
+    <mat-card-content class= "cardcontent" *ngFor="let i of bookinginfo">
+      <p>TRIP TYPE: {{i.tt}}</p>
+      <p>PICKUP POINT: {{i.pickup}}</p>
+      <p>DROPPING POINT: {{i.dest}}</p>
+      <p>DATE OF TRAVEL: {{i.date.toDateString()}}</p>
+      <p>TIME OF ARRIVAL: {{i.time}}</p>
+    </mat-card-content>
+    <mat-divider class="divider"></mat-divider>
+    <mat-card-content class= "cardcontent" *ngFor="let j of displaydata">
+      <div class="disp-data">
+        <img [src]="j.imagePath" [alt]="j.dname">
+      </div>
+      <p>DRIVER NAME: {{ j.dname }}</p>
+      <p>PHONE: {{ j.phone }}</p>
+      <p>CAR: {{ j.cname }}</p>
+      <p>PLATE: {{ j.plate }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

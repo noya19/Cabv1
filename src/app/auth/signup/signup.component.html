@@ -1,0 +1,49 @@
+<div class="card">
+  <mat-card>
+      <h2 style="color:blueviolet;">SIGNUP</h2>
+      <form [formGroup]="form" (submit)="onSignup()">
+
+        <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+          <img [src]="imagePreview" [alt]="form.value.name">
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput  formControlName="name" type="text" placeholder="John Doe">
+          <mat-error *ngIf="form.get('name').invalid">Please Provide Required Input</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" type="text" placeholder="8755521245">
+          <mat-error *ngIf="form.get('phone').invalid">Please Provide Required Input</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>email</mat-label>
+          <input matInput formControlName="email" type="email"  placeholder="JohnDoe@live.com">
+          <mat-error *ngIf="form.get('email').invalid">Please Provide Required Input</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>password</mat-label>
+          <input matInput formControlName="password" type="password">
+          <mat-error *ngIf="form.get('password').invalid">Please Provide Required Input</mat-error>
+        </mat-form-field>
+
+        <div class="Addfile">
+          <button mat-raised-button type="button" (click)="filepicker.click()">ADD A PROFILE PICTURE</button>
+          <input type="file" #filepicker (change)="onImagePicked($event)">
+        </div>
+
+
+        <button
+        mat-raised-button
+        color = "accent"
+        type="submit">SignUp</button>
+
+        <p>Already have an account? Login</p>
+      </form>
+    </mat-card>
+  </div>

@@ -1,0 +1,61 @@
+<div class= "Whole">   <!--  this is a container for the whole file(basically all cards) -->
+<mat-card class="firstone">
+  <form [formGroup]="form" (submit)="onBook()">
+
+  <mat-form-field appearance="outline">
+   <mat-label>Trip-Type</mat-label>
+    <mat-select formControlName="tt">
+        <mat-option value="one-way">One-way</mat-option>
+        <mat-option value="Round-trip">Round-Trip</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Pickup Point</mat-label>
+      <input matInput type="text" formControlName="pickup" placeholder="Where from?">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Destination</mat-label>
+      <input matInput type="text" formControlName="dest" placeholder="Where to?">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a date</mat-label>
+        <input matInput formControlName="date" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Time of Arrival</mat-label>
+        <input matInput type="time" formControlName="time" placeholder="Time">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Car-Type</mat-label>
+        <mat-select formControlName="ct">
+          <mat-option value="pool">Pool</mat-option>
+          <mat-option value="midi">Midi</mat-option>
+          <mat-option value="sedan">Sedan</mat-option>
+          <mat-option value="SUV">Suv</mat-option>
+          <mat-option value="Lux">Luxury</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <button class="sub"
+    mat-raised-button
+    color = "accent"
+    type="submit">LETS GO</button>
+
+   </form>
+
+  <!-- 2nd part is for the map -->
+  <div class= 'map-container'>
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+  </div>
+  <!-- end of 2nd part -->
+</mat-card>
