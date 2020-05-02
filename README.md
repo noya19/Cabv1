@@ -4,3 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Initialization
 
+Run npm install in terminal to install all dependencies
+
+# Running Angular Developement Server
+
+ng serve  (starts the Angular Developement server)
+
+# Start Mongo DB server
+
+npm run
